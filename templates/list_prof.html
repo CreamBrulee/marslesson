@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="margin-left: 100px;">
+        <h2 >Список профессий</h2>
+        {% if list0 == 'ol' or list0 == 'ul' %}
+            <{{ list0 }}>
+            {% for item in proflist %}
+                <li>{{ item }}</li>
+            {% endfor %}
+            </{{ list0 }}>
+        {% else %}
+           <p>Ошибка запроса</p>
+        {% endif %}
+    </div>
+{% endblock %}
